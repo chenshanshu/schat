@@ -1,0 +1,10 @@
+
+/server/node_modules/
+/ui/node_modules/
+/ui/dist/
+/app/node_modules/
+/app/Build/*
+/app/Package/*
+*.swp
+*.md~
+*.md.un~

@@ -1,0 +1,23 @@
+{
+  "name": "schat",
+  "version": "1.0.0",
+  "description": "app for chat",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "packager": "electron-packager . schat --overwrite --win=x32 --out  ./Package --arch=x64 --app-version=1.0.0 --electron-version=5.0.0",
+    "build": "node build.js"
+  },
+  "repository": "",
+  "keywords": [],
+  "author": "danel",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^5.0.0",
+    "electron-packager": "^13.1.1",
+    "electron-winstaller": "^3.0.4"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  }
+}
