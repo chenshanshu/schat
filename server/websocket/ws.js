@@ -2,14 +2,14 @@ const websocket = require('ws').Server,
     wsApi = require('../api/wsApi'),
     url = require('url'),
     queryString = require('../common/queryString');
-let socket = '';
 
 module.exports = function (server) {
     const wss = new websocket({
         server
     });
+    console.log('ws start')
     wss.on('connection', function connection(socket, request) {
-        console.log('开始走ws')
+        console.log('链接成功')
         let params = url.parse(request.url).query,
             token = queryString(params).token;
         // 将socket储存进mongo

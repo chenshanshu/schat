@@ -44,7 +44,7 @@ export default {
       });
     } else {
       this.getFriendList();
-      this.$ws.onmessage = this.getMsg; 
+      this.$ws.onmessage = this.getMsg;
     }
   },
   methods: {
@@ -55,9 +55,10 @@ export default {
       );
     },
     getMsg(event) {
-      let response = JSON.parse(event.data);
-      if(response.code === 0){
-        this.list=response.data;
+      let response = JSON.parse(event.data) || {};
+      console.log(response);
+      if (response.code === 0) {
+        this.list = response.data || [];
         console.log(this.list);
       }
     },
