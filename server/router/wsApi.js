@@ -3,6 +3,7 @@ const express = require('express'),
 
 router.ws('/', (ws, req) => {
     // ws.send({});
+    console.log('链接成功')
     ws.on('message', msg => {
         ws.send(JSON.stringify({
             code: 0,
@@ -11,8 +12,8 @@ router.ws('/', (ws, req) => {
         }));
     });
     ws.on('close', msg => {
-        // 此处将client进行删除
+        console.log('触发关闭')
     });
-    ws.on('err', msg => {});
+    ws.on('error', err => {});
 })
 module.exports = router;

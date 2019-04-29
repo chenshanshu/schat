@@ -10,8 +10,7 @@ module.exports = {
         filename: '[name].js'
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.vue$/,
                 loader: 'vue-loader'
             },
@@ -32,36 +31,36 @@ module.exports = {
                 ]
             },
             {
-                test:/\.styl(us)$/,
-                use:[
+                test: /\.styl(us)$/,
+                use: [
                     'vue-style-loader',
                     'css-loader',
                     'stylus-loader'
                 ]
             },
             {
-                test:/.(jpg|png|gif|svg)$/,
-                loader:'url-loader',
-                options:{
-                    limit:1000,
-                    outputPath:'images/'
+                test: /.(jpg|png|gif|svg)$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 1000,
+                    outputPath: 'images/'
                 }
             },
             {
                 test: /\.(woff?|woff2?|eot|ttf|otf)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
-                  limit: 10000,
-                  name: 'fonts/[name].[hash:7].[ext]'
+                    limit: 10000,
+                    name: 'fonts/[name].[hash:7].[ext]'
                 }
-              }
+            }
         ]
     },
-    resolve:{
-        extensions:['.js','.vue','.json'],
-        alias:{ //配置目录别名
-            'vue$':'vue/dist/vue.esm.js',
-            '@':path.resolve(__dirname,'./src'),
+    resolve: {
+        extensions: ['.js', '.vue', '.json'],
+        alias: { //配置目录别名
+            'vue$': 'vue/dist/vue.esm.js',
+            '@': path.resolve(__dirname, './src'),
         }
     },
     plugins: [
@@ -77,11 +76,12 @@ module.exports = {
         clientLogLevel: 'warning',
         historyApiFallback: true,
         hot: true,
-        progress:true,
+        progress: true,
+        overlay: true,
         compress: true, //代码压缩
         host: 'localhost',
-        port: 8888,
+        port: (()=>{console.log('your application is running at http://localhost:8888');return 8888})(),
         quiet: true,
-	disableHostCheck: true,
+        disableHostCheck: true,
     }
 }

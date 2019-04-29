@@ -19,6 +19,7 @@ export default {
         this.transitionName = "slide-left";
       } else {
         this.transitionName = "slide-right";
+        
       }
     }
   }

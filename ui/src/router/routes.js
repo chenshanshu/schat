@@ -1,4 +1,5 @@
-import Login from '@/views/login/login'
+
+import Login from '@/views/login'
 import IndexPage from '@/views/index/index'
 import Chat from '@/views/chat/index'
 export default [
