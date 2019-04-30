@@ -26,6 +26,7 @@
             placeholder="请再次输入密码"
             float
             v-model="form[key]"
+            @keyup.enter="submit"
           ></v-ons-input>
           <v-ons-input
             v-if="key=='identifyCode'"
@@ -37,7 +38,7 @@
           ></v-ons-input>
         </p>
         <p class="mt_30">
-          <v-ons-button modifier="large" class="mb_8" @click="submit">{{btn1.text}}</v-ons-button>
+          <v-ons-button modifier="large outline" class="mb_8" @click="submit">{{btn1.text}}</v-ons-button>
           <router-link class="pull-left" :to="'/login'+btn2.url">{{btn2.text}}</router-link>
           <router-link v-if="btn3" class="pull-right" :to="'/login'+btn3.url">{{btn3.text}}</router-link>
         </p>
@@ -206,6 +207,9 @@ export default {
 
     .mb_8 {
       margin-bottom: 8px;
+      &:hover{
+        
+      }
     }
   }
 }

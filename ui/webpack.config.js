@@ -80,7 +80,7 @@ module.exports = {
         overlay: true,
         compress: true, //代码压缩
         host: 'localhost',
-        port: (()=>{console.log('your application is running at http://localhost:8888');return 8888})(),
+        port: 8888,
         quiet: true,
         disableHostCheck: true,
     }

@@ -12,7 +12,12 @@ function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 375,
-    height: 667
+    height: 667,
+    show:false,
+    resizable:false,
+    frame:false,
+    title:'SCHAT',
+    hasShadow:true
   })
 
   // and load the index.html of the app.
@@ -20,7 +25,9 @@ function createWindow() {
 
   // Open the DevTools.
   //mainWindow.webContents.openDevTools()
-
+  mainWindow.on('ready-to-show', function () {
+    mainWindow.show();
+  })
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
     // Dereference the window object, usually you would store windows
