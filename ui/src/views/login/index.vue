@@ -57,12 +57,12 @@ export default {
       btn3: {},
       list: {
         login: {
-          title: "登陆",
+          title: "登录",
           form: {
             username: "",
             password: ""
           },
-          btn1: { text: "登陆", url: "" },
+          btn1: { text: "登录", url: "" },
           btn2: { text: "忘记密码？", url: "/resetPasswd" },
           btn3: { text: "新用户注册", url: "/register" }
         },
@@ -74,7 +74,7 @@ export default {
             identifyCode: ""
           },
           btn1: { text: "注册", url: "" },
-          btn2: { text: "去登陆", url: "/login" }
+          btn2: { text: "去登录", url: "/login" }
         },
         resetPasswd: {
           title: "忘记密码",
@@ -85,7 +85,7 @@ export default {
             identifyCode: ""
           },
           btn1: { text: "提交", url: "" },
-          btn2: { text: "去登陆", url: "/login" },
+          btn2: { text: "去登录", url: "/login" },
           btn3: { text: "新用户注册", url: "/register" }
         }
       }
@@ -154,9 +154,9 @@ export default {
         })
         .catch(err => {
           this.$ons.notification.toast(err.message, {
-              timeout: 600,
-              animation: "fall"
-            });
+            timeout: 600,
+            animation: "fall"
+          });
         });
     }
   },
@@ -207,8 +207,8 @@ export default {
 
     .mb_8 {
       margin-bottom: 8px;
-      &:hover{
-        
+
+      &:hover {
       }
     }
   }

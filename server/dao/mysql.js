@@ -2,13 +2,13 @@ class mysql {
     constructor() {
         this.mysqlLib = require('mysql');
         this.config = {
-            host: '127.0.0.1',
+            host: '192.168.108.189',
             port: '3306',
             database: 'schat',
             user: 'root',
             password: '201619'
         };
-        this.pool = this.mysqlLib.createPool(this.config); //创建连接池，提升速度；
+        this.pool = this.mysqlLib.createPool(this.config); 
     }
     getClient() {
         return new Promise((resolve, reject) => {

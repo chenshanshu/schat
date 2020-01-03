@@ -79,7 +79,6 @@ module.exports = {
         progress: true,
         overlay: true,
         compress: true, //代码压缩
-        host: 'localhost',
         port: 8888,
         quiet: true,
         disableHostCheck: true,

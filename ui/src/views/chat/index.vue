@@ -18,6 +18,7 @@
           :class="item.type=='receive'? 'pull-left' : 'pull-right bgcolor_aqua'"
           class="max_66"
         >
+        
           <div>{{item.msg}}</div>
         </v-ons-card>
         <div class="clearfix"></div>
